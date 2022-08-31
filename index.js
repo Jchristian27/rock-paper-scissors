@@ -10,9 +10,7 @@ function getComputerChoice() {
 
 function singleRound(computerSelection, playerSelection) {
   computerSelection = getComputerChoice();
-  playerSelection = window.prompt("Rock, Paper, or Scissors?");
-  console.log(computerSelection)
-  console.log(playerSelection)
+  playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
   if (computerSelection == "rock" && playerSelection == "rock") {
     console.log("It's a tie!")
   } else if (computerSelection == "rock" && playerSelection == "paper") {
