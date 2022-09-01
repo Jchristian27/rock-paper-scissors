@@ -13,20 +13,20 @@ function singleRound(computerSelection, playerSelection) {
   playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
   winner = "";
   if (computerSelection === "rock" && playerSelection === "paper") {
-  winner = "player";
-  return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-} else if (computerSelection === "paper" && playerSelection === "scissors") {
-  winner = "player";
-  return  `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-} else if (computerSelection === "scissors" && playerSelection === "rock") {
-  winner = "player";
-  return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-} else if (computerSelection === playerSelection) {
-  return `You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`
-} else {
-  winner = "computer";
-  return `You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`;
-}
+    winner = "player";
+    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+  } else if (computerSelection === "paper" && playerSelection === "scissors") {
+    winner = "player";
+    return  `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+  } else if (computerSelection === "scissors" && playerSelection === "rock") {
+    winner = "player";
+    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+  } else if (computerSelection === playerSelection) {
+    return `You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`
+  } else {
+    winner = "computer";
+    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`;
+  }
 }
 
 function game() {
