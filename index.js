@@ -8,26 +8,26 @@ function getComputerChoice() {
   return choice;
 }
 
-function singleRound(computerSelection, playerSelection) {
-  computerSelection = getComputerChoice();
-  playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
-  winner = "";
-  if (computerSelection === "rock" && playerSelection === "paper") {
-    winner = "player";
-    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-  } else if (computerSelection === "paper" && playerSelection === "scissors") {
-    winner = "player";
-    return  `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-  } else if (computerSelection === "scissors" && playerSelection === "rock") {
-    winner = "player";
-    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-  } else if (computerSelection === playerSelection) {
-    return `You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`
-  } else {
-    winner = "computer";
-    return `You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`;
-  }
-}
+// function singleRound(computerSelection, playerSelection) {
+//   computerSelection = getComputerChoice();
+//   playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
+//   winner = "";
+//   if (computerSelection === "rock" && playerSelection === "paper") {
+//     winner = "player";
+//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+//   } else if (computerSelection === "paper" && playerSelection === "scissors") {
+//     winner = "player";
+//     return  `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+//   } else if (computerSelection === "scissors" && playerSelection === "rock") {
+//     winner = "player";
+//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
+//   } else if (computerSelection === playerSelection) {
+//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`
+//   } else {
+//     winner = "computer";
+//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`;
+//   }
+// }
 
 function game() {
   computerScore = 0;
