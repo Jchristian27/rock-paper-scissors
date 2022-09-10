@@ -35,19 +35,24 @@ function singleRound(computerSelection, playerSelection) {
   if (computerSelection === "rock" && playerSelection === "paper") {
     playerScore += 1;
     title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
+    playerScoreHTML.innerText = `Player Score: ${playerScore}`;
   } else if (computerSelection === "paper" && playerSelection === "scissors") {
     playerScore += 1;
     title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
+    playerScoreHTML.innerText = `Player Score: ${playerScore}`;
   } else if (computerSelection === "scissors" && playerSelection === "rock") {
     playerScore += 1;
     title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
+    playerScoreHTML.innerText = `Player Score: ${playerScore}`;
   } else if (computerSelection === playerSelection) {
     title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!</h3>`;
   } else {
     computerScore += 1
     title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!</h3>`;
+    computerScoreHTML.innerText = `Computer Score: ${computerScore}`;
   }
 }
+
 
 // function game() {
 //   computerScore = 0;
