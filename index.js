@@ -8,43 +8,40 @@ function getComputerChoice() {
   return choice;
 }
 
-let title = document.querySelector('.title');
-let choiceRock = document.querySelector('#rock');
-let choicePaper = document.querySelector('#paper');
-let choiceScissors = document.querySelector('#scissors');
+choiceRock = document.querySelector('#rock');
+choicePaper = document.querySelector('#paper');
+choiceScissors = document.querySelector('#scissors');
 
-choiceRock.addEventListener('click', function() {
-  title.innerHTML = '<h1>YOU CHOSE ROCK!</h1>';
-})
+choiceRock.addEventListener('mousedown', function() {
+  singleRound(getComputerChoice(), 'rock');
+});
 
-choicePaper.addEventListener('click', function() {
-  title.innerHTML = '<h1>YOU CHOSE PAPER!</h1>';
-})
+choicePaper.addEventListener('mousedown', function() {
+  singleRound(getComputerChoice(), 'paper');
+});
 
-choiceScissors.addEventListener('click', function() {
-  title.innerHTML = '<h1>YOU CHOSE SCISSORS!</h1>';
-})
+choiceScissors.addEventListener('mousedown', function() {
+  singleRound(getComputerChoice(), 'scissors');
+});
 
-// function singleRound(computerSelection, playerSelection) {
-//   computerSelection = getComputerChoice();
-//   playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
-//   winner = "";
-//   if (computerSelection === "rock" && playerSelection === "paper") {
-//     winner = "player";
-//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-//   } else if (computerSelection === "paper" && playerSelection === "scissors") {
-//     winner = "player";
-//     return  `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-//   } else if (computerSelection === "scissors" && playerSelection === "rock") {
-//     winner = "player";
-//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`;
-//   } else if (computerSelection === playerSelection) {
-//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`
-//   } else {
-//     winner = "computer";
-//     return `You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`;
-//   }
-// }
+function singleRound(computerSelection, playerSelection) {
+  winner = "";
+  if (computerSelection === "rock" && playerSelection === "paper") {
+    winner = "player";
+    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+  } else if (computerSelection === "paper" && playerSelection === "scissors") {
+    winner = "player";
+    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+  } else if (computerSelection === "scissors" && playerSelection === "rock") {
+    winner = "player";
+    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+  } else if (computerSelection === playerSelection) {
+    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`);
+  } else {
+    winner = "computer";
+    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`);
+  }
+}
 
 // function game() {
 //   computerScore = 0;
