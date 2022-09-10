@@ -28,7 +28,6 @@ function declareWinner() {
 }
 
 function game(computerSelection, playerSelection) {
-  winner = "";
   if (computerSelection === "rock" && playerSelection === "paper") {
     playerScore += 1;
     title.innerHTML = `<h2>You chose ${playerSelection} and the computer chose ${computerSelection}</h2><h3>You win!</h3>`;
