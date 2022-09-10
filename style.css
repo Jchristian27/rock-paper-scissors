@@ -83,6 +83,12 @@ h3 {
   width: auto;
 }
 
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  background-color: #ebecf0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
