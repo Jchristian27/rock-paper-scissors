@@ -2,10 +2,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  min-height: 100vh;
 }
 
 .header {
@@ -91,6 +91,5 @@ h3 {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: auto;
 }
