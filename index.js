@@ -1,5 +1,3 @@
-let defaultDomState = document.body.innerHTML;
-
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
@@ -67,45 +65,3 @@ function game(computerSelection, playerSelection) {
     computerScoreHTML.innerText = computerScore;
   }
 }
-
-//When you need to reset the DOM, just replace the current body with:
-// document.body.innerHTML = defaultDomState;
-
-// function game() {
-//   computerScore = 0;
-//   playerScore = 0;
-//   for (let i = 0; i < 100; i++) {
-//      if (i < 100) {
-//       console.log(singleRound())
-//       if (winner === "player") {
-//         playerScore += 1;
-//         console.log(`Your Score: ${playerScore} Computer's Score: ${computerScore}`)
-//         console.log("")
-//         if (playerScore === 5) {
-//           console.log("YOU WON THIS MATCH! GAME OVER")
-//           break
-//         } else if (computerScore === 5) {
-//           console.log("YOU LOST THIS MATCH! GAME OVER")
-//           break
-//         }
-//       } else if (winner === "computer") {
-//         computerScore += 1;
-//         console.log(`Your Score: ${playerScore} Computer's Score: ${computerScore}`)
-//         console.log("")
-//         if (playerScore === 5) {
-//           console.log("YOU WON THIS MATCH! GAME OVER")
-//           break
-//         } else if (computerScore === 5) {
-//           console.log("YOU LOST THIS MATCH! GAME OVER")
-//           break
-//         }
-//       } else {
-//         console.log(`Your Score: ${playerScore} Computer's Score: ${computerScore}`)
-//         console.log("")
-//       }
-//     }
-//   }
-// }
-
-// game()
-
