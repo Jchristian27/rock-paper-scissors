@@ -8,9 +8,15 @@ function getComputerChoice() {
   return choice;
 }
 
-choiceRock = document.querySelector('#rock');
-choicePaper = document.querySelector('#paper');
-choiceScissors = document.querySelector('#scissors');
+let choiceRock = document.querySelector('#rock');
+let choicePaper = document.querySelector('#paper');
+let choiceScissors = document.querySelector('#scissors');
+let title = document.querySelector('.title');
+let playerScoreHTML = document.querySelector('#player-score');
+let computerScoreHTML = document.querySelector('#computer-score');
+let playerScore = 0;
+let computerScore = 0;
+
 
 choiceRock.addEventListener('mousedown', function() {
   singleRound(getComputerChoice(), 'rock');
@@ -27,19 +33,19 @@ choiceScissors.addEventListener('mousedown', function() {
 function singleRound(computerSelection, playerSelection) {
   winner = "";
   if (computerSelection === "rock" && playerSelection === "paper") {
-    winner = "player";
-    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+    playerScore += 1;
+    title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
   } else if (computerSelection === "paper" && playerSelection === "scissors") {
-    winner = "player";
-    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+    playerScore += 1;
+    title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
   } else if (computerSelection === "scissors" && playerSelection === "rock") {
-    winner = "player";
-    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You win!`);
+    playerScore += 1;
+    title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You win!</h3>`;
   } else if (computerSelection === playerSelection) {
-    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!`);
+    title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. It's a tie!</h3>`;
   } else {
-    winner = "computer";
-    console.log(`You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!`);
+    computerScore += 1
+    title.innerHTML = `<h3>You chose ${playerSelection} and the computer chose ${computerSelection}. You lose!</h3>`;
   }
 }
 

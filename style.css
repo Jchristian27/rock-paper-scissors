@@ -45,8 +45,8 @@
   justify-content: center;
 }
 
-.player-score,
-.computer-score {
+.player-score-box,
+.computer-score-box {
   display: flex;
   flex-direction: column;
   align-items: center;
