@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-A simple rock paper scissors game played in the console. Whoever wins 5 rounds first wins the match.
+A simple rock paper scissors game built to practice manipulating the DOM with JS. Whoever wins 5 rounds first wins the match.
