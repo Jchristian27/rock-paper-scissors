@@ -1,3 +1,12 @@
+let choiceRock = document.querySelector('#rock');
+let choicePaper = document.querySelector('#paper');
+let choiceScissors = document.querySelector('#scissors');
+let title = document.querySelector('.title');
+let playerScoreHTML = document.querySelector('#player-score-num');
+let computerScoreHTML = document.querySelector('#computer-score-num');
+let playerScore = 0;
+let computerScore = 0;
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
@@ -40,16 +49,6 @@ function game(computerSelection, playerSelection) {
     computerScoreHTML.innerText = computerScore;
   }
 }
-
-let choiceRock = document.querySelector('#rock');
-let choicePaper = document.querySelector('#paper');
-let choiceScissors = document.querySelector('#scissors');
-let title = document.querySelector('.title');
-let playerScoreHTML = document.querySelector('#player-score-num');
-let computerScoreHTML = document.querySelector('#computer-score-num');
-let playerScore = 0;
-let computerScore = 0;
-
 
 choiceRock.addEventListener('click', function() {
   game(getComputerChoice(), 'rock');
